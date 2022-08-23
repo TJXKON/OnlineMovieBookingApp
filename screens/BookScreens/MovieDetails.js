@@ -50,8 +50,6 @@ export default class MovieDetails extends Component {
               poster: this.state.poster,
               title: this.state.title,
               price: this.state.price,
-              genre: this.state.genre,
-              duration: this.state.duration,
             });
           }}
         />
