@@ -49,6 +49,10 @@ export default class BookHome extends Component {
       },
     ];
     this.setState({movieList: movieList});
+
+    this.props.navigation.setOptions ({
+      title: "Booking",
+    });
   }
 
   render() {

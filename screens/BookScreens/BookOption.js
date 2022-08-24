@@ -14,6 +14,8 @@ export default class BookOption extends Component{
       seats:'1',
       poster:'',
       price:'',
+      genre:'',
+      duration:'',
     };
   }
 
@@ -21,6 +23,12 @@ export default class BookOption extends Component{
     this.setState({title:this.props.route.params.title})
     this.state.poster=this.setState({poster:this.props.route.params.poster})
     this.setState({price:this.props.route.params.price})
+    this.setState({genre:this.props.route.params.genre})
+    this.setState({duration:this.props.route.params.duration})
+
+    this.props.navigation.setOptions ({
+      title: "Options",
+    });
   }
   
   render(){
@@ -37,6 +45,7 @@ export default class BookOption extends Component{
         />
 
         <Text style={{ fontSize:30}}>{this.state.title}</Text>
+        <Text style={{ fontSize:25}}>{this.state.genre}</Text>
 
         <PickerWithLabel
           label={'Date'}
@@ -75,7 +84,7 @@ export default class BookOption extends Component{
         <Button
           title="Proceed to payment"
           onPress={() => {
-            this.props.navigation.navigate ('BookPayment',{seats:this.state.seats,price:this.state.price});
+            this.props.navigation.navigate ('BookPayment',{title:this.state.title,seats:this.state.seats,price:this.state.price,genre:this.state.genre,date:this.state.dateSlot,time:this.state.timeSlot,duration:this.state.duration});
           }}
         />
       </ScrollView>

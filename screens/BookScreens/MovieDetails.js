@@ -20,9 +20,13 @@ export default class MovieDetails extends Component {
     this.state.poster = this.setState({poster: this.props.route.params.poster});
     this.setState({price: this.props.route.params.price});
     this.setState({description: this.props.route.params.fulldesc});
-    this.setState({duartion: this.props.route.params.duration});
+    this.setState({duration: this.props.route.params.duration});
     this.setState({genre: this.props.route.params.genre});
     this.setState({rated: this.props.route.params.rated});
+
+    this.props.navigation.setOptions ({
+      title: "Movie Details",
+    });
   }
 
   render() {
@@ -50,6 +54,8 @@ export default class MovieDetails extends Component {
               poster: this.state.poster,
               title: this.state.title,
               price: this.state.price,
+              genre: this.state.genre,
+              duration: this.state.duration,
             });
           }}
         />

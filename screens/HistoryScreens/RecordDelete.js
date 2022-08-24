@@ -50,6 +50,7 @@ export default class RecordDelete extends Component {
               this.state.id,
             ]);
           });
+          this.props.route.params.refresh();
           this.props.navigation.goBack();
         },
       },
