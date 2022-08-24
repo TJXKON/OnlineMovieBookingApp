@@ -1,2 +1,3 @@
 # OnlineMovieBookingApp
-This is an online movie booking app for university assignment of UECS2353 WAD course.
+Ignore the OnlineMovieBookingApp folder
+Just take and copy the screen and python folder and App, commonData file outside
